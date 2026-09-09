@@ -17,13 +17,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity
 public class SecurityConfig {
 
-//    @Bean
-//    public UserDetailsManager userDetailsManager (DataSource dataSource) {
-//        JdbcUserDetailsManager userDetailsManager = new JdbcUserDetailsManager(dataSource);
-//        return userDetailsManager;
-//    }
-
-
 //
 //    @Bean
 //    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
