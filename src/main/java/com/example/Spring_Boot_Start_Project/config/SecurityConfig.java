@@ -42,18 +42,6 @@ public class SecurityConfig {
 //    @Bean
 //    public UserDetailsService userDetailsService() {
 //        UserDetails userDetails1 =
-//                User.withUsername("ahmed").password("{noop}ahmed123").build();
-//        UserDetails userDetails2 =
-//                User.withUsername("eslam").password("{noop}eslam123").build();
-//        UserDetails userDetails3 =
-//                User.withUsername("mona").password("{noop}mona123").build();
-//
-//        return new InMemoryUserDetailsManager(userDetails1, userDetails2, userDetails3);
-//    }
-
-//    @Bean
-//    public UserDetailsService userDetailsService() {
-//        UserDetails userDetails1 =
 //                User.withUsername("ahmed").password("{bcrypt}$2a$12$ixOCwlKFbsG0j5zw9GvFuuQfRMKeCB3fY09ePl1etyBxITZ2MztZK")
 //                        .roles("USER", "ADMIN").build();
 //        UserDetails userDetails2 =
