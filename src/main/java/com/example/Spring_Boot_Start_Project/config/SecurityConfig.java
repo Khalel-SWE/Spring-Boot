@@ -39,21 +39,7 @@ public class SecurityConfig {
         http.httpBasic(AbstractHttpConfigurer::disable);
         return http.build();
     }
-//    @Bean
-//    public UserDetailsService userDetailsService() {
-//        UserDetails userDetails1 =
-//                User.withUsername("ahmed").password("{bcrypt}$2a$12$ixOCwlKFbsG0j5zw9GvFuuQfRMKeCB3fY09ePl1etyBxITZ2MztZK")
-//                        .roles("USER", "ADMIN").build();
-//        UserDetails userDetails2 =
-//                User.withUsername("eslam").password("{bcrypt}$2a$12$8AgErbwdNPQTPRJ8bL2kmul8hFRn.GrggPkAb4Lxj63hSi3bT7yVS")
-//                        .roles("USER").build();
-//        UserDetails userDetails3 =
-//                User.withUsername("mona").password("{bcrypt}$2a$12$c8x3FNavgfJT.89TeTqjbOqvlGeBe8iHj2NVBAgQZaRzDRtqwSz7W")
-//                        .roles("USER", "ADMIN", "MANGER").build();
-//
-//        return new InMemoryUserDetailsManager(userDetails1, userDetails2, userDetails3);
-//    }
-
+    
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
