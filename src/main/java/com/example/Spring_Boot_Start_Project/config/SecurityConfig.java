@@ -30,16 +30,14 @@ public class SecurityConfig {
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.csrf(httpSecurityCsrfConfigurer -> httpSecurityCsrfConfigurer.disable());
         http.authorizeHttpRequests(
-                api -> api//.requestMatchers("/eraa-soft**").hasRole("ADMIN")
+                api -> api
                 .requestMatchers("/auth/**").permitAll().anyRequest().authenticated()
-                //.requestMatchers(HttpMethod.GET, "/user").permitAll()//.hasAnyRole("ADMIN", "USER")
         );
         http.addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class);
-//        http.httpBasic(Customizer.withDefaults());
         http.httpBasic(AbstractHttpConfigurer::disable);
         return http.build();
     }
-    
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
