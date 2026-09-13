@@ -31,11 +31,8 @@ public class EraaSoftSchoolController {
         return ResponseEntity.ok(eraaSoftSchoolService.update(eraaSoftSchool));
     }
 
-    //http://localhost:8080/delete-student?studentId=4
-    //http://localhost:8080/delete-/student/6
     @DeleteMapping("/delete/student")
     ResponseEntity<Void> deleteStudent (@RequestParam("studentId") Long id) {
-//    boolean deleteStudent (@PathVariable Long id) {
 
         return eraaSoftSchoolService.delete(id) ?
                 ResponseEntity.noContent().build() :
