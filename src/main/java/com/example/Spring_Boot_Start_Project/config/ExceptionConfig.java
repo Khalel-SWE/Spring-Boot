@@ -33,8 +33,6 @@ public class ExceptionConfig {
         List<BundleMessage> bundleMessages = new ArrayList<>();
 
         exception.getBindingResult().getFieldErrors().forEach(fieldError -> {
-            //user name must not be null
-//            exceptionResponses.add(new ExceptionResponse(fieldError.getDefaultMessage()));
             String key = fieldError.getDefaultMessage();
             BundleMessage bundleMessage = new BundleMessage();
             bundleMessage.setMessage(bundleMessageService.getMessage(key));
