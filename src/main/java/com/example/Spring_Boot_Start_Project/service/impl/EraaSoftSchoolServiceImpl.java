@@ -20,7 +20,6 @@ public class EraaSoftSchoolServiceImpl implements EraaSoftSchoolService {
 
     private EraaSoftSchoolRepo eraaSoftSchoolRepo;
     private EraaSoftMapper eraaSoftMapper;
-//    private ModelMapper modelMapper;
 
     @Autowired
     public EraaSoftSchoolServiceImpl(EraaSoftSchoolRepo eraaSoftSchoolRepo, EraaSoftMapper eraaSoftMapper /*, ModelMapper modelMapper*/) {
