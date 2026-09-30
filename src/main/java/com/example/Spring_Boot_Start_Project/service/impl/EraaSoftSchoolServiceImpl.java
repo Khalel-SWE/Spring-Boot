@@ -34,19 +34,7 @@ public class EraaSoftSchoolServiceImpl implements EraaSoftSchoolService {
         if (Objects.nonNull(eraaSoftSchoolDTO.getId())) {
             throw new RuntimeException("id must be null");
         }
-//        if (Objects.nonNull(eraaSoftSchoolDTO.getId())) {
-//            throw new RuntimeException("id must be null");
-//        }
-//        if (Objects.isNull(eraaSoftSchoolDTO.getFullUserName())) {
-//            throw new RuntimeException("user name must be not null");
-//        }
-//        if (Objects.isNull(eraaSoftSchoolDTO.getPassword())) {
-//            throw new RuntimeException("password must be not null");
-//        }
-//        if (Objects.isNull(eraaSoftSchoolDTO.getAge())) {
-//            throw new RuntimeException("age must be not null");
-//        }
-//
+        
         Optional <EraaSoftSchool> eraaSoftSchoolOp = eraaSoftSchoolRepo.findByUserName(eraaSoftSchoolDTO.getFullUserName());
 
         if (eraaSoftSchoolOp.isPresent()) {
