@@ -34,14 +34,13 @@ public class EraaSoftSchoolServiceImpl implements EraaSoftSchoolService {
         if (Objects.nonNull(eraaSoftSchoolDTO.getId())) {
             throw new RuntimeException("id must be null");
         }
-        
+
         Optional <EraaSoftSchool> eraaSoftSchoolOp = eraaSoftSchoolRepo.findByUserName(eraaSoftSchoolDTO.getFullUserName());
 
         if (eraaSoftSchoolOp.isPresent()) {
             throw new RuntimeException("user name is exist");
         }
 
-//        EraaSoftSchool eraaSoftSchool = modelMapper.map(eraaSoftSchoolDTO, EraaSoftSchool.class);
         EraaSoftSchool eraaSoftSchool = eraaSoftMapper.toEraaSoftSchool(eraaSoftSchoolDTO);
 
         eraaSoftSchool = eraaSoftSchoolRepo.save(eraaSoftSchool);
