@@ -76,17 +76,7 @@ public class EraaSoftSchoolServiceImpl implements EraaSoftSchoolService {
         eraaSoftSchoolRepo.deleteById(id);
         return true;
     }
-
-
-    // The right code:
-//    @Override
-//    public boolean delete(Long id) {
-//        if (eraaSoftSchoolRepo.existsById(id)) {
-//            eraaSoftSchoolRepo.deleteById(id); // actually removes from DB
-//            return true;
-//        }
-//        return false;
-//    }
+    
 
 
     @Override
