@@ -76,7 +76,7 @@ public class EraaSoftSchoolServiceImpl implements EraaSoftSchoolService {
         eraaSoftSchoolRepo.deleteById(id);
         return true;
     }
-    
+
 
 
     @Override
@@ -85,9 +85,6 @@ public class EraaSoftSchoolServiceImpl implements EraaSoftSchoolService {
         if (CollectionUtils.isEmpty(eraaSoftSchools)) {
             return new ArrayList<>();
         }
-//
-//        return eraaSoftSchools.stream().map(eraaSoftSchool ->
-//            modelMapper.map(eraaSoftSchool, EraaSoftSchoolDTO.class)).collect(Collectors.toList());
 
         return eraaSoftSchools.stream().map(eraaSoftSchool ->
                 eraaSoftMapper.toEraaSoftSchoolDto(eraaSoftSchool)).collect(Collectors.toList());
