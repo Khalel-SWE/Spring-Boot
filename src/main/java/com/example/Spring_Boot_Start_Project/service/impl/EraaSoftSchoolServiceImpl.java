@@ -98,7 +98,6 @@ public class EraaSoftSchoolServiceImpl implements EraaSoftSchoolService {
             return null;
         }
 
-//        return modelMapper.map(eraaSoftSchoolOptional.get(), EraaSoftSchoolDTO.class);
         return eraaSoftMapper.toEraaSoftSchoolDto(eraaSoftSchoolOptional.get());
     }
 
