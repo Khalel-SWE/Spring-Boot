@@ -47,7 +47,7 @@ public class EraaSoftSchoolServiceImpl implements EraaSoftSchoolService {
 
         eraaSoftSchoolDTO.setId(eraaSoftSchool.getId());
 
-        return eraaSoftSchoolDTO; // save not send id on EraaSoftSchool
+        return eraaSoftSchoolDTO; 
     }
 
     @Override
@@ -55,7 +55,7 @@ public class EraaSoftSchoolServiceImpl implements EraaSoftSchoolService {
         if (Objects.isNull(eraaSoftSchoolDTO.getId())) {
             throw new RuntimeException("id must not be null");
         }
-        
+
         EraaSoftSchool eraaSoftSchool = eraaSoftMapper.toEraaSoftSchool(eraaSoftSchoolDTO);
 
         eraaSoftSchoolRepo.save(eraaSoftSchool);
