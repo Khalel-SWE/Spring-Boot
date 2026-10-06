@@ -55,7 +55,7 @@ public class EraaSoftSchoolServiceImpl implements EraaSoftSchoolService {
         if (Objects.isNull(eraaSoftSchoolDTO.getId())) {
             throw new RuntimeException("id must not be null");
         }
-//        EraaSoftSchool eraaSoftSchool = modelMapper.map(eraaSoftSchoolDTO, EraaSoftSchool.class);
+        
         EraaSoftSchool eraaSoftSchool = eraaSoftMapper.toEraaSoftSchool(eraaSoftSchoolDTO);
 
         eraaSoftSchoolRepo.save(eraaSoftSchool);
