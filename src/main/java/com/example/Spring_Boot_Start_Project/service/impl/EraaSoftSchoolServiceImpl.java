@@ -47,7 +47,7 @@ public class EraaSoftSchoolServiceImpl implements EraaSoftSchoolService {
 
         eraaSoftSchoolDTO.setId(eraaSoftSchool.getId());
 
-        return eraaSoftSchoolDTO; 
+        return eraaSoftSchoolDTO;
     }
 
     @Override
