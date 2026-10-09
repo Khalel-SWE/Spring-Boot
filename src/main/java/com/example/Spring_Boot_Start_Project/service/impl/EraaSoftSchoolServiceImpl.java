@@ -25,7 +25,6 @@ public class EraaSoftSchoolServiceImpl implements EraaSoftSchoolService {
     public EraaSoftSchoolServiceImpl(EraaSoftSchoolRepo eraaSoftSchoolRepo, EraaSoftMapper eraaSoftMapper /*, ModelMapper modelMapper*/) {
         this.eraaSoftSchoolRepo = eraaSoftSchoolRepo;
         this.eraaSoftMapper = eraaSoftMapper;
-//        this.modelMapper = modelMapper;
     }
 
     @Override
