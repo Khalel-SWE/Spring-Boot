@@ -63,7 +63,6 @@ public class EraaSoftSchoolServiceImpl implements EraaSoftSchoolService {
         return eraaSoftSchoolDTO;
     }
 
-    // the wrong code
     @Override
     public boolean delete(Long id) {
 
