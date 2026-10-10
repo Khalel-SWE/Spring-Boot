@@ -54,7 +54,6 @@ public class AccountServiceImpl implements AccountService {
 //        Role role = new Role();
 //        role.setRoleName("USER");
 //        role.setAccount(account);
-//        account.setRoles(List.of(role));
 
         List<Role> roles = Collections.singletonList(new Role(account, "USER"));
         account.setRoles(roles);
