@@ -53,7 +53,6 @@ public class AccountServiceImpl implements AccountService {
         account.setPassword(passwordEncoder.encode(accountDto.getPassword()));
 //        Role role = new Role();
 //        role.setRoleName("USER");
-//        role.setAccount(account);
 
         List<Role> roles = Collections.singletonList(new Role(account, "USER"));
         account.setRoles(roles);
