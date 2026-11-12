@@ -12,7 +12,6 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 public class SpringBootStartProjectApplication {
 
 	public static void main(String[] args) {
-		//admin
 		SpringApplication.run(SpringBootStartProjectApplication.class, args);
 	}
 }
