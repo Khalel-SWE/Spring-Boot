@@ -3,7 +3,6 @@ package com.example.Spring_Boot_Start_Project.controller;
 import com.example.Spring_Boot_Start_Project.dto.EraaSoftSchoolDTO;
 import com.example.Spring_Boot_Start_Project.service.EraaSoftSchoolService;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -16,10 +15,7 @@ public class EraaSoftSchoolController {
 
     private EraaSoftSchoolService eraaSoftSchoolService;
 
-    @Autowired
-    public EraaSoftSchoolController(EraaSoftSchoolService eraaSoftSchoolService) {
-        this.eraaSoftSchoolService = eraaSoftSchoolService;
-    }
+    
 
     @PostMapping("/save-student")
     ResponseEntity<EraaSoftSchoolDTO> addStudent (@RequestBody @Valid EraaSoftSchoolDTO eraaSoftSchool) {
